@@ -52,6 +52,7 @@ class Golf
 
   def self.hole7(a)
     ra = []
+    f=1
     a[0..-1].each { |e|
       f||=e
       if f + 1 != e
