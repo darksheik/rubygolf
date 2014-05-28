@@ -1,5 +1,4 @@
 class Golf
-  #theirs
   def self.hole1(a)
     a.reduce(:*)
   end
@@ -18,7 +17,6 @@ class Golf
     b.join(" ")
   end
 
-  #ours
   def self.hole2
     (1..26).map{|q|(q+96).chr}
   end
