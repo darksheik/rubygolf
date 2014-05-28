@@ -42,14 +42,14 @@ class Golf
 
   def self.hole7(a)
     ra = []
-    f=1
-    a[0..-1].each { |e|
-      f||=e
-      if f + 1 != e
-        ra << [f,e].join('-')
-        f=nil
+    i=0;f=a[0]
+    while i<a.size
+      if a[i] + 1 != a[i+1]
+        f == a[i] ? ra << f.to_s : ra << [f,a[i]].join('-')
+        f = a[i+1]
       end
-    }
+      i+=1
+    end
     ra
   end
 end
