@@ -8,10 +8,8 @@ class Golf
     (1..a).reduce(:*)
   end
 
-  def self.hole5(array)
-    result = []
-    array.length.times{|n|array.each_with_index{|num, i|result+=[array[i..i+(n)]]}}
-    result.uniq
+  def self.hole5(a)
+    (1..a.count).map{|n| a.each_cons(n).to_a}.flatten(1)
   end
 
   def self.hole9(a)
