@@ -26,15 +26,7 @@ class Golf
   end
 
   def self.hole4(a)
-    a.map{|e|
-      if e.match(/^man/)
-        "hat(#{e})"
-      elsif e.match(/^dog/)
-        e.split(')')[0]+"(bone))"
-      elsif e.match(/^cat/)
-        e.gsub('cat','dead')
-      end
-    }
+    a.map{|e|e.match(/^man/)?"hat(#{e})":(e.match(/^dog/)?e.split(')')[0]+"(bone))":(e.gsub('cat','dead')if e.match(/^cat/)))}
   end
 
   def self.hole6(a)
@@ -46,7 +38,7 @@ class Golf
 
   def self.hole8(i)
     a=[1,1]
-    (1..i-2).each{|e| a.push(a[-1]+a[-2])}
+    (1..i-2).each{|e|a.push(a[-1]+a[-2])}
     a
   end
 
