@@ -39,15 +39,16 @@ class Golf
   end
 
   def self.hole7(a)
-    ra = []
-    i=0;f=a[0]
+    r=[]
+    i=0
+    f=a[0]
     while i<a.size
       if a[i] + 1 != a[i+1]
-        f == a[i] ? ra << f.to_s : ra << [f,a[i]].join('-')
+        r << (f  == a[i] ? f.to_s : [f,a[i]].join('-'))
         f = a[i+1]
       end
       i+=1
     end
-    ra
+    r
   end
 end
