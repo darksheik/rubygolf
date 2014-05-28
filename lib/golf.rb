@@ -26,7 +26,7 @@ class Golf
   end
 
   def self.hole4(a)
-    a.map { |e|
+    a.map{|e|
       if e.match(/^man/)
         "hat(#{e})"
       elsif e.match(/^dog/)
@@ -38,7 +38,7 @@ class Golf
   end
 
   def self.hole6(a)
-    (1..a).map { |e|
+    (1..a).map{|e|
       s=[e%3==0?'fizz':'',e%5==0?'buzz':''].join
       s==''?e:s
     }
