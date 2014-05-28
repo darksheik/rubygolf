@@ -8,8 +8,8 @@ class Golf
     (1..a).reduce(:*)
   end
 
-  def self.hole5(array)
-    (1..a.count).map{|n| a.each_cons(n).to_a}
+  def self.hole5(a)
+    (1..a.count).map{|n| a.each_cons(n).to_a}.flatten(1)
   end
 
   def self.hole9(a)
